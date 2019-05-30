@@ -33,4 +33,4 @@ def resnet():
     # convnet.test(backup_path='backup/cifar10-v4/', epoch=0, batch_size=128)
 
 
-resnet()
+vgg_cnn()
