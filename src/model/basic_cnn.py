@@ -106,7 +106,7 @@ class ConvNet():
             os.mkdir(backup_path)
 
         # 构建会话
-        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.45)
+        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.6) #0.45
         self.sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
         
         # 模型保存器
@@ -193,7 +193,7 @@ class ConvNet():
         self.sess.close()
                 
     def test(self, dataloader, backup_path, epoch, batch_size=128):
-        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.25)
+        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.3)
         self.sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
         # 读取模型
         self.saver = tf.train.Saver(write_version=tf.train.SaverDef.V2)

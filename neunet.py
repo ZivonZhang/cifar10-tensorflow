@@ -4,7 +4,7 @@ import os
 from src.data.cifar10 import Corpus
 
 os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
 cifar10 = Corpus()
 
@@ -33,4 +33,4 @@ def resnet():
     # convnet.test(backup_path='backup/cifar10-v4/', epoch=0, batch_size=128)
 
 
-basic_cnn()
+resnet()
