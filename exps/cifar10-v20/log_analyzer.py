@@ -69,13 +69,13 @@ def plot_curve(loss_list1, loss_idxs1, valid_precision_list1, valid_precision_id
 	plt.axis([0, 500, 0.8, 0.95])
 
 	# plt.show()
-	plt.savefig('E:\\Github\cifar10-tensorflow\\exps\cifar10-v20\cifar10-v20.png', dpi=72, format='png')
+	plt.savefig('cifar10-v66.png', dpi=72, format='png')
 
 
-loss_list1, valid_precision_list1 = load_log('E:\\Github\cifar10-tensorflow\\exps\cifar10-v20\cifar10-v20.txt')
-loss_list2, valid_precision_list2 = load_log('E:\\Github\cifar10-tensorflow\\exps\cifar10-v20\cifar10-v21.txt')
-loss_list3, valid_precision_list3 = load_log('E:\\Github\cifar10-tensorflow\\exps\cifar10-v20\cifar10-v22.txt')
-loss_list4, valid_precision_list4 = load_log('E:\\Github\cifar10-tensorflow\\exps\cifar10-v20\cifar10-v23.txt')
+loss_list1, valid_precision_list1 = load_log('cifar10-v20.txt')
+loss_list2, valid_precision_list2 = load_log('cifar10-v21.txt')
+loss_list3, valid_precision_list3 = load_log('cifar10-v22.txt')
+loss_list4, valid_precision_list4 = load_log('cifar10-v23.txt')
 
 # print(numpy.array(loss_list[-100:]).mean(), numpy.array(train_precision_list[-100:]).mean())
 loss_list1, loss_idxs1 = curve_smooth(loss_list1, batch_size=1)
